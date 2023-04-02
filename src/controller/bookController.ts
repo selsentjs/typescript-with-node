@@ -27,9 +27,9 @@ const getSingleBook: RequestHandler = async (req,res,next) => {
 
    const createBooks: RequestHandler = async (req, res, next) => {
     try {
-        const data: BookModel = req.body;
-        console.log("Data", data);
-        const books = await Book.create(data);
+        // const data: BookModel = req.body;
+        // console.log("Data", data);
+        const books = await Book.create(req.body);
         return res
             .status(200)
             .json({ message: "Book created successfully", data: books });
