@@ -1,0 +1,49 @@
+https://www.youtube.com/watch?v=QPE7L9b1bms
+============================================
+
+npm init -y
+npm i --save-dev typescript @types/express @types/node
+npx tsc --init
+"outDir":"./build"  => "rootDir":"./src" (idhai uncomment sei from tsconfig.json)
+npm i --save express body-parser mongoose
+create src folder => inside create app.ts
+======================  app.ts==================================
+import express, {Application,Request,Response} from 'express'
+const app: Application = express();
+const port: number = 3000;
+
+app.get('/', (req: Request,res: Response) => {
+res.send('welcome')
+});
+
+app.listen(port, () => {
+console.log('server is running on port 3000')
+});
+==================================================================
+type => npx tsc [create build folder and inside app.js]
+
+to run => node build/app.js
+package.json inside => "scripts":{
+"start": "npx tsc && node build/app.js",
+"test":""
+}
+
+run => npm start
+
+=======================================================================================
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
